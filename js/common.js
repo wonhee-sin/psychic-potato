@@ -11,6 +11,7 @@ function goHide(i){
 $(document).ready(function(){
 
 
+     // gnb 작동
      $('.openAll1').mouseover(function(){
           if( parseInt($('header').css('width')) > 800 ){
                $('.gnb_depth2_1').fadeIn('fast');
@@ -86,12 +87,31 @@ $(document).ready(function(){
           isOver2[3] = false;
           setTimeout("goHide(4)",200);
      });
+
+
+     // 모바일 메뉴 띄우기
+     $('.openMOgnb').click(function(){
+          $('header').addClass('on');
+          $('header .header_cont').slideDown('fast');
+          $('header .header_area .header_cont .closePop').show();
+          $("body").bind('touchmove',function(e){e.preventDefault()});
+     });
+     $('header .header_cont .closePop').click(function(){
+          $('.header_cont').slideUp('fast');
+          $('header').removeClass('on');
+          $("body").unbind('touchmove');
+     });
 });
 
 
 
 
-
+$(document).ready(function(){
+     // PC브라우저에서 좁혀서 메뉴 닫고 다시 넓힐 때 상단메뉴 노출되게.
+     $(window).resize(function() {
+         if ( parseInt($('header').css('width')) > 800 ) $('.header_cont').show();
+     }); 
+ });
 
 
 

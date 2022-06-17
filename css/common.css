@@ -152,6 +152,62 @@ header .header_area .openMOgnb {display : none;}
 .gnb_depth .submenu_list li:last-child a{padding-right: 0;}
 .gnb_depth .submenu_list a.on{color:#fff;}
 
+/* main rolling */
+.main_rolling_mobile {display: none;}
+.visualRoll {position: relative; width: 100%;}
+.viewImgList {position: relative; width: 100%;}
+.viewImgList li {text-align: center; height: 550px; line-height: 550px;}
+.viewImgList li.imglist0 {position: relative; z-index: 50;
+			background: url(../img/mainslide01.jpg) no-repeat center;}
+.viewImgList li.imglist1 {position: absolute; width: 100%; left: 0; top: 0; z-index: 10;
+			background: url(../img/mainslide02.jpg) no-repeat center;}
+.viewImgList li.imglist2 {position: absolute; width: 100%; left: 0; top: 0; z-index: 10;
+			background: url(../img/mainslide03.jpg) no-repeat center;}
+.viewImgList li {background-size: cover !important;}
+.viewImgList li .roll_content {position: relative;}
+.viewImgList li .roll_content .roll_txtline {position: absolute; left: 0; bottom: 60px;
+			width: 100%; line-height: 1; text-align: center; font-size: 22px; color: #fff; letter-spacing: 2px;}
+.rollbtnArea {position: absolute; width: 100%; left: 0; bottom: 25px; z-index: 200;}
+.rollbtnArea .rollingbtn {width: 320px; margin: 0 auto; text-align: center;}
+.rollbtnArea .rollingbtn li {display: inline-block; margin-right: 5px;}
+.rollbtnArea .rollingbtn li.butt0 {margin-left: 1 0px;}
+.rollbtnArea .rollingbtn li.rollstop {}
+.rollbtnArea .rollingbtn li.rollplay {display: none;}
+.rollbtnArea .rollingbtn li a {vertical-align: top;}
+
+.about_area {}
+.about_area h2 {padding: 55px 0 105px; text-align: center; font-size: 40px;}
+.about_area .about_box {background: #f4f0e9;}
+.about_area .place_list {}
+.about_area .place_list li {float: left; width: 32%; margin-left: 2%; text-align: center;
+			position: relative; top: -50px;}
+.about_area .place_list li:first-child {margin-left: 0;}
+.about_area .place_list li .img_topplace {width: 100%;}
+.about_area .place_list li h3 {font-weight: bold; font-size: 18px; padding-top: 25px; color: #000;}
+.about_area .place_list li p.txt {box-sizing: border-box; padding: 10px 30px 0; width: 100%;
+			overflow: hidden; word-break: keep-all; line-height: 1.8; color: #666;}
+.about_area .place_list li .view {display: inline-block; margin-top: 20px; padding-top: 5px; border-top: 2px solid #333; color: #666;}
+
+.appbbs_area {padding: 60px 0;}
+.appbbs_area .appbbs_box {}
+.appbbs_box .app_line {float: left; width: 66%; box-sizing: border-box; padding: 45px 0;
+			text-align:  center; background: url(../img/bg_app.jpg) no-repeat; font-size: 0;}
+.appbbs_box .app_line a {display: inline-block; width: 42.4%; height: 100px; line-height: 100px;
+			box-sizing: border-box; padding-left: 75px; text-align: left; background: rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 20px 50%;
+			border: 2px solid #fff; margin-right: 10px; font-size: 26px; color: #fff; vertical-align: middle;}
+.appbbs_box .app_line a + a {margin-right: 0; padding-left: 85px; background-image: url(../img/ico_phone.png);}
+.appbbs_box .bbs_line {float: right; width: 30%;}
+.appbbs_box .bbs_line h3 {font-size: 26px;}
+.appbbs_box .bbs_line .notice_recent {padding-top: 10px;}
+.appbbs_box .bbs_line .notice_recent li {padding: 8px 0;}
+.appbbs_box .bbs_line .notice_recent li a {display: block; padding-left: 14px;
+			background: url(../img/ico_bullet.png) no-repeat 0 50%; overflow: hidden;
+			text-overflow: ellipsis; white-space: nowrap;}
+
+
+
+
+
 @media all and (max-width:1065px) and (min-width:801px) {			/* ipad가로, ipadPro가로세로, gallexyTab가로 */
 	.box_inner {width: 100%;}
 	header .header_area h1 {padding-left: 20px;}
@@ -159,6 +215,11 @@ header .header_area .openMOgnb {display : none;}
 	.header_cont .gnb li a {padding: 26px 25px;}
 	.gnb_depth .submenu_list {width: 100%; padding-left: 52%;}
 	.gnb_depth .submenu_list li a {padding: 20px;}
+
+	.about_area .place_list {box-sizing: border-box; padding: 0 20px;}
+
+	.appbbs_area .appbbs_box {box-sizing: border-box; padding: 0 20px;}
+	.appbbs_box .app_line a {font-size: 21px;}
 }
 
 @media all and (max-width:800px) {
@@ -166,7 +227,7 @@ header .header_area .openMOgnb {display : none;}
 	.btn_baseColor {display:inline-block; width:100%; height:50px; line-height:50px; background:#384d75; font-weight:bold; font-size:20px; color:#fff !important;}
 	.box_inner {width: 100%;}
 	header {height: 90px; text-align: center; z-index: 200; background: rgba(0,0,0,0.5);}
-	header .on{background: #31353d;}
+	header.on{background: #31353d;}
 	header .header_area h1 {float: none; width: 100%; height: 50px; text-align: center; padding: 35px 0 0;}
 	header .header_area h1 a {display: inline-block; width: 180px; height: 23px; background-size: 180px 23px;}
 	header .header_area .openMOgnb {display: block; position: absolute; left: 15px; top: 35px; width: 23px; height: 16px;}
@@ -194,6 +255,25 @@ header .header_area .openMOgnb {display : none;}
 	.header_cont .gnb li + li + li + li + li a {background-image: url(../img/ico_gnb05.png);}
 	.gnb_depth {display: none;}
 	
+	.main_rolling_pc {display: none;}
+	.main_rolling_mobile {display: block;}
+	.main_rolling_mobile .swiper-container .swiper-wrapper .swiper-slide img {width: 100%;}
+	.main_rolling_mobile .swiper-pagination {width: auto; right: 20px; left: auto; top: auto; bottom: 20px; font-size: 0;}
+	.main_rolling_mobile .swiper-pagination-bullet {width: 5px; height: 5px;
+			margin: 0 3px !important; background: #fff; opacity: 0.2;}
+	.main_rolling_mobile .swiper-pagination-bullet-active {opacity: 1;}
+
+	.about_area h2 {padding: 27px 0 25px; font-size: 20px;}
+	.about_area h2 b {display: block; padding-top: 10px;}
+	.about_area .about_box {background: #fff;}
+	.about_area .place_list li {float: none; width: 100%; margin: 0; box-sizing: border-box; padding: 0 20px; top: 0;}
+	.about_area .place_list li p.txt {padding: 10px 50px 30px; line-height: 1.4;}
+	.about_area .place_list li .view {padding-bottom: 10px; margin: 0 0 30px;}
+
+	.appbbs_area {padding: 0 20px;}
+	.appbbs_box .app_line {display: none;}
+	.appbbs_box .bbs_line {float: none; width: 100%; padding: 20px 0; border-top: 1px solid #d6d7d8;}
+	.appbbs_box .bbs_line h3 {font-weight: bold; font-size: 19px;}
 }
 
 @media all and (max-width:320px) {	
